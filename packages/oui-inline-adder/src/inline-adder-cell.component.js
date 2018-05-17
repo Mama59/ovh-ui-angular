@@ -6,6 +6,6 @@ export default {
     controller,
     transclude: true,
     bindings: {
-        autoGrow: "<"
+        autoGrow: "<?"
     }
 };

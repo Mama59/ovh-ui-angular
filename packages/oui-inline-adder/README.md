@@ -156,4 +156,4 @@ An Inline Adder can have more than one row and be displayed as a group.
 
 | Attribute         | Type            | Binding | One-time binding | Values                    | Default             | Description                        |
 | ----              | ----            | ----    | ----             | ----                      | ----                | ----                               |
-| `auto-grow`       | boolean         | <       | yes               |                           | true                | should the cell auto-grow to occupy available space |
+| `auto-grow`       | boolean         | <       | yes               |                          | true                | should the cell auto-grow to occupy available space |
