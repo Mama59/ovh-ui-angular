@@ -2,7 +2,7 @@
 
 <component-status cx-design="complete" ux="complete"></component-status>
 
-An inline Adder is used to present fields on a line. The special feature of the inline Adder is that you can add lines as needed. By default, only one line is displayed in the Inline Adder. When a new line is added, it becomes read-only and another new line is created below it.
+An Inline Adder is used to present fields on a line. The special feature of the inline Adder is that you can add lines as needed. By default, only one line is displayed in the Inline Adder. When a new line is added, it becomes read-only and another new line is created below it.
 
 ## Usage
 

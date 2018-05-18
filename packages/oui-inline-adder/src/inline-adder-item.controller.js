@@ -15,8 +15,6 @@ export default class {
     }
 
     $postLink () {
-        // Sometimes the digest cycle is done before dom manipulation,
-        // So we use $timeout to force the $apply
         this.$timeout(() =>
             this.$element
                 .removeAttr("aria-add-item")
