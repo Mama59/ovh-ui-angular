@@ -142,8 +142,8 @@ An Inline Adder can have more than one row and be displayed as a group.
 
 | Attribute         | Type            | Binding | One-time binding | Values                    | Default             | Description                        |
 | ----              | ----            | ----    | ----             | ----                      | ----                | ----                               |
-| `on-add`          |                 | &       |                  |                           |                     | new item add handler (button)      |
-| `on-remove`       |                 | &       |                  |                           |                     | item remove handler (button)       |
+| `on-add`          | function        | &       |                  |                           |                     | new item add handler that returns a promise |
+| `on-remove`       | function        | &       |                  |                           |                     | item remove handler that returns a promise  |
 
 ### oui-inline-adder-item
 

@@ -12,7 +12,7 @@ export default class {
 
     $postLink () {
         if (this.autoGrow) {
-            this.$element.addClass("oui-inline-adder__cell-auto-grow");
+            this.$element.addClass("oui-inline-adder__cell_auto-grow");
         }
     }
 }
