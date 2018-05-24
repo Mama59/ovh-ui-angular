@@ -14,10 +14,6 @@ export default class {
         addBooleanParameter(this, "required");
     }
 
-    _updateIndeterminateState (model) {
-        this.checkboxElement.prop("indeterminate", model === null);
-    }
-
     $postLink () {
         addBooleanParameter(this, "required");
         this.checkboxElement = this.$element.find("input");
@@ -30,4 +26,7 @@ export default class {
         );
     }
 
+    _updateIndeterminateState (model) {
+        this.checkboxElement.prop("indeterminate", model === null);
+    }
 }
