@@ -9,14 +9,32 @@
 ```html:preview
 <div ng-init="$ctrl.checked = false">
     <oui-switch
-        help-text="At least 3 chars"
+        help-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
         model="$ctrl.checked"
         label="Label">
     </oui-switch>
 </div>
 ```
 
+### Disabled
+
+```html:preview
+<oui-switch
+    help-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    model="true"
+    label="Label"
+    disabled>
+</oui-switch>
+<oui-switch
+    help-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    model="false"
+    label="Label"
+    disabled>
+</oui-switch>
+```
+
 ### On change
+
 ```html:preview
 <oui-switch
   text="Normal"
