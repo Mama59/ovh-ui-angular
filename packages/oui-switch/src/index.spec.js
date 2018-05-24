@@ -10,7 +10,7 @@ describe("ouiSwitch", () => {
         TestUtils = _TestUtils_;
     }));
 
-    function getCheckboxInputElement (element) {
+    function getSwitchInputElement (element) {
         return element[0].querySelector("input[type=checkbox]");
     }
 
@@ -46,7 +46,7 @@ describe("ouiSwitch", () => {
             it("should display an unchecked switch when no model", () => {
                 const element = TestUtils.compileTemplate("<oui-switch></oui-switch>");
 
-                const checkboxElement = getCheckboxInputElement(element);
+                const checkboxElement = getSwitchInputElement(element);
                 const $checkboxElement = angular.element(checkboxElement);
                 expect($checkboxElement.prop("checked")).toBe(false);
                 expect($checkboxElement.prop("indeterminate")).toBe(false);
@@ -57,7 +57,7 @@ describe("ouiSwitch", () => {
                     checked: true
                 });
 
-                const checkboxElement = getCheckboxInputElement(element);
+                const checkboxElement = getSwitchInputElement(element);
                 const $checkboxElement = angular.element(checkboxElement);
                 expect($checkboxElement.prop("checked")).toBe(true);
                 expect($checkboxElement.prop("indeterminate")).toBe(false);
@@ -68,7 +68,7 @@ describe("ouiSwitch", () => {
                     checked: false
                 });
 
-                const checkboxElement = getCheckboxInputElement(element);
+                const checkboxElement = getSwitchInputElement(element);
                 const $checkboxElement = angular.element(checkboxElement);
                 expect($checkboxElement.prop("checked")).toBe(false);
             });
@@ -81,7 +81,7 @@ describe("ouiSwitch", () => {
                 const element = TestUtils.compileTemplate("<oui-switch model=\"$ctrl.currentModel\"></oui-switch>", context);
                 const $ctrl = TestUtils.getElementController(element);
 
-                const checkboxElement = getCheckboxInputElement(element);
+                const checkboxElement = getSwitchInputElement(element);
                 const $checkboxElement = angular.element(checkboxElement);
 
                 $checkboxElement.prop("checked", true);
@@ -95,14 +95,14 @@ describe("ouiSwitch", () => {
             it("should display an active switch when no attribute", () => {
                 const element = TestUtils.compileTemplate("<oui-switch></oui-switch>");
 
-                const checkboxElement = getCheckboxInputElement(element);
+                const checkboxElement = getSwitchInputElement(element);
                 expect(angular.element(checkboxElement).prop("disabled")).toBe(false);
             });
 
             it("should display a disabled switch when defined but no value", () => {
                 const element = TestUtils.compileTemplate("<oui-switch disabled></oui-switch>");
 
-                const checkboxElement = getCheckboxInputElement(element);
+                const checkboxElement = getSwitchInputElement(element);
                 expect(angular.element(checkboxElement).prop("disabled")).toBe(true);
             });
 
@@ -111,7 +111,7 @@ describe("ouiSwitch", () => {
                     disabled: true
                 });
 
-                const checkboxElement = getCheckboxInputElement(element);
+                const checkboxElement = getSwitchInputElement(element);
                 expect(angular.element(checkboxElement).prop("disabled")).toBe(true);
             });
         });
@@ -124,7 +124,7 @@ describe("ouiSwitch", () => {
                     onChange: onChangeSpy
                 });
 
-                const checkboxElement = getCheckboxInputElement(element);
+                const checkboxElement = getSwitchInputElement(element);
                 const $checkboxElement = angular.element(checkboxElement);
 
                 $checkboxElement.prop("checked", true);
@@ -138,7 +138,7 @@ describe("ouiSwitch", () => {
             it("should apply a required validation with the required attribute without value", () => {
                 const element = TestUtils.compileTemplate("<oui-switch required></oui-switch>");
 
-                const checkboxElement = getCheckboxInputElement(element);
+                const checkboxElement = getSwitchInputElement(element);
                 expect(angular.element(checkboxElement).prop("required")).toBe(true);
             });
 
@@ -149,7 +149,7 @@ describe("ouiSwitch", () => {
                     isRequired: true
                 });
 
-                const checkboxElement = getCheckboxInputElement(element);
+                const checkboxElement = getSwitchInputElement(element);
                 expect(angular.element(checkboxElement).prop("required")).toBe(true);
             });
 
@@ -160,7 +160,7 @@ describe("ouiSwitch", () => {
                     isRequired: false
                 });
 
-                const checkboxElement = getCheckboxInputElement(element);
+                const checkboxElement = getSwitchInputElement(element);
                 expect(angular.element(checkboxElement).prop("required")).toBe(false);
             });
 
@@ -173,7 +173,7 @@ describe("ouiSwitch", () => {
                 });
 
                 const form = element.scope().form;
-                const checkboxElement = getCheckboxInputElement(element);
+                const checkboxElement = getSwitchInputElement(element);
                 const $checkboxElement = angular.element(checkboxElement);
 
                 expect(form.$valid).toBeFalsy();
