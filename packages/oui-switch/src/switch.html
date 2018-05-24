@@ -1,0 +1,17 @@
+<div class="oui-field">
+  <label class="oui-field__label oui-label oui-switch__label" ng-bind="::$ctrl.label"></label>
+  <label class="oui-switch">
+    <input type="checkbox"
+      class="oui-switch__checkbox"
+      ng-model="$ctrl.model"
+      ng-required="$ctrl.isRequired"
+      ng-change="$ctrl.onChange({ modelValue: $ctrl.model })"
+      ng-disabled="$ctrl.disabled"
+      >
+    <div class="oui-switch__slider"></div>
+  </label>
+  <div class="oui-field__helper"
+    ng-if="::!!$ctrl.helpText"
+    ng-bind="::$ctrl.helpText">
+  </div>
+</div>
