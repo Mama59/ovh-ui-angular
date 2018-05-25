@@ -1,6 +1,6 @@
-<div class="oui-field">
-  <label class="oui-field__label oui-label oui-switch__label" ng-bind="::$ctrl.label"></label>
-  <label class="oui-switch">
+<div class="oui-switch">
+  <label class="oui-switch__label" ng-bind="::$ctrl.label"></label>
+  <label class="oui-switch__container">
     <input type="checkbox"
       class="oui-switch__checkbox"
       ng-model="$ctrl.model"
@@ -10,7 +10,7 @@
       >
     <div class="oui-switch__slider"></div>
   </label>
-  <div class="oui-field__helper"
+  <div class="oui-switch__helper"
     ng-if="::!!$ctrl.helpText"
     ng-bind="::$ctrl.helpText">
   </div>

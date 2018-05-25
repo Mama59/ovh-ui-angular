@@ -55,3 +55,14 @@
   Is this form valid? : {{ form.$valid ? "yes" : "no" }}
 </form>
 ```
+
+## API
+
+| Attribute     | Type                    | Binding | One-time Binding | Values                   | Default | Description
+| ----          | ----                    | ----    | ----             | ----                     | ----    | ----
+| label         | string                  | @       |                  |                          |         | switch label
+| help-text     | string                  | @?      |                  |                          |         | helper or description text
+| disabled      | boolean                 | <?      |                  |                          | false   | disabled flag
+| model         | nullable&lt;boolean&gt; | =?      |                  | `true`, `false`, `null`  |         | current value of the switch and null is considered as `indeterminate`
+| required      | boolean                 | <?      |                  |                          | false   | `true` if the switch should be on
+| on-change     | function                | &?      |                  |                          |         | handler triggered when value has changed
