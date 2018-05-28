@@ -8,10 +8,9 @@
 
 ```html:preview
 <div ng-init="$ctrl.checked = false">
-    <oui-switch
-        help-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-        model="$ctrl.checked"
-        label="Label">
+    <oui-switch id="switch" name="switch-name"
+        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        model="$ctrl.checked">
     </oui-switch>
 </div>
 ```
@@ -20,15 +19,11 @@
 
 ```html:preview
 <oui-switch
-    help-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-    model="true"
-    label="Label"
+    model="false"
     disabled>
 </oui-switch>
 <oui-switch
-    help-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-    model="false"
-    label="Label"
+    model="true"
     disabled>
 </oui-switch>
 ```
@@ -36,12 +31,13 @@
 ### On change
 
 ```html:preview
-<oui-switch
-  text="Normal"
-  model="$ctrl.onChangeValue"
-  on-change="$ctrl.lastOnChangeValue = modelValue">
-</oui-switch>
-
+<div class="oui-doc-preview-only" style="margin-bottom: 5px;">
+    <oui-switch
+      text="Normal"
+      model="$ctrl.onChangeValue"
+      on-change="$ctrl.lastOnChangeValue = modelValue">
+    </oui-switch>
+</div>
 <span>Last onChange value: {{ $ctrl.lastOnChangeValue }}</span>
 ```
 
@@ -60,9 +56,10 @@
 
 | Attribute     | Type                    | Binding | One-time Binding | Values                   | Default | Description
 | ----          | ----                    | ----    | ----             | ----                     | ----    | ----
-| label         | string                  | @       |                  |                          |         | switch label
-| help-text     | string                  | @?      |                  |                          |         | helper or description text
+| description   | string                  | @?      |                  |                          |         | description text
 | disabled      | boolean                 | <?      |                  |                          | false   | disabled flag
-| model         | nullable&lt;boolean&gt; | =?      |                  | `true`, `false`, `null`  |         | current value of the switch and null is considered as `indeterminate`
-| required      | boolean                 | <?      |                  |                          | false   | `true` if the switch should be on
+| id            | string                  | @?      | `true`           |                          |         | id attribute of the switch
+| model         | nullable&lt;boolean&gt; | =?      |                  | `true`, `false`          |         | current value of the switch
+| name          | string                  | @?      | `true`           |                          |         | name attribute of the switch
 | on-change     | function                | &?      |                  |                          |         | handler triggered when value has changed
+| required      | boolean                 | <?      |                  |                          | false   | `true` if the switch should be on

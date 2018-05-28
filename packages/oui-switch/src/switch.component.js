@@ -3,8 +3,10 @@ import template from "./switch.html";
 
 export default {
     bindings: {
+        id: "@?",
+        name: "@?",
         label: "@?",
-        helpText: "@?",
+        description: "@?",
         checked: "<?",
         model: "=?",
         disabled: "<?",

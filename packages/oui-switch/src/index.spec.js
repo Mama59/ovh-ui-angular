@@ -1,4 +1,3 @@
-import switchComponent from "../../oui-switch/src/switch.component";
 
 describe("ouiSwitch", () => {
     let TestUtils;
@@ -14,28 +13,22 @@ describe("ouiSwitch", () => {
         return element[0].querySelector("input[type=checkbox]");
     }
 
-    function getSwitchLabel (element) {
-        return element[0].querySelector(".oui-switch__label");
-    }
-
     function getSwitchDescriptionElement (element) {
-        return element[0].querySelector(".oui-field__helper");
+        return element[0].querySelector(".oui-switch__description");
     }
 
     describe("Component", () => {
 
-        describe("text attribute", () => {
-            it("should display a switch label", () => {
-                const element = TestUtils.compileTemplate("<oui-switch label=\"test\"></oui-switch>");
-
-                const switchLabelElement = getSwitchLabel(element);
-                expect(angular.element(switchLabelElement).html()).toBe("test");
+        describe("input checkbox", () => {
+            it("should display a input element", () => {
+                const element = TestUtils.compileTemplate("<oui-switch></oui-switch>");
+                expect(getSwitchInputElement(element)).toBeTruthy();
             });
         });
 
         describe("description attribute", () => {
             it("should display the switch's description", () => {
-                const element = TestUtils.compileTemplate("<oui-switch help-text=\"test\"></oui-switch>");
+                const element = TestUtils.compileTemplate("<oui-switch description=\"test\"></oui-switch>");
 
                 const descriptionSwitchElement = getSwitchDescriptionElement(element);
                 expect(angular.element(descriptionSwitchElement).html()).toBe("test");
@@ -49,7 +42,6 @@ describe("ouiSwitch", () => {
                 const checkboxElement = getSwitchInputElement(element);
                 const $checkboxElement = angular.element(checkboxElement);
                 expect($checkboxElement.prop("checked")).toBe(false);
-                expect($checkboxElement.prop("indeterminate")).toBe(false);
             });
 
             it("should display a on switch when true", () => {
@@ -60,7 +52,6 @@ describe("ouiSwitch", () => {
                 const checkboxElement = getSwitchInputElement(element);
                 const $checkboxElement = angular.element(checkboxElement);
                 expect($checkboxElement.prop("checked")).toBe(true);
-                expect($checkboxElement.prop("indeterminate")).toBe(false);
             });
 
             it("should display a an off switch when false", () => {

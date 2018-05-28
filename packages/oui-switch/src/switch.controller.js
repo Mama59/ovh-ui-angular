@@ -10,23 +10,8 @@ export default class {
     }
 
     $onInit () {
+        this.$element.addClass("oui-switch");
         addBooleanParameter(this, "disabled", false);
         addBooleanParameter(this, "required");
-    }
-
-    $postLink () {
-        addBooleanParameter(this, "required");
-        this.checkboxElement = this.$element.find("input");
-
-        // $watch is required because there is no other way
-        // to be notified when the value has changed from the
-        // outside
-        this.$scope.$watch("$ctrl.model", (newValue) =>
-            this._updateIndeterminateState(newValue)
-        );
-    }
-
-    _updateIndeterminateState (model) {
-        this.checkboxElement.prop("indeterminate", model === null);
     }
 }
