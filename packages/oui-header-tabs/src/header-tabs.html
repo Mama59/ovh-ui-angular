@@ -1,0 +1,13 @@
+<nav class="oui-header-tabs">
+    <button type="button" class="oui-header-tabs__slider oui-header-tabs__slider_left oui-icon oui-icon-chevron-left"
+            ng-click="$ctrl.scrollToLeft()"
+            ng-show="$ctrl.scroll.begin > 0">
+    </button>
+    <ul class="oui-header-tabs__container"
+        ng-transclude>
+    </ul>
+    <button type="button" class="oui-header-tabs__slider oui-header-tabs__slider_right oui-icon oui-icon-chevron-right"
+            ng-click="$ctrl.scrollToRight()"
+            ng-show="$ctrl.scroll.end > 0">
+    </button>
+</nav>
