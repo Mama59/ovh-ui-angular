@@ -29,8 +29,15 @@ loadTests(require.context("../../oui-chips/src/", true, /.*((\.spec)|(index))$/)
 loadTests(require.context("../../oui-popover/src/", true, /.*((\.spec)|(index))$/));
 loadTests(require.context("../../oui-stepper/src/", true, /.*((\.spec)|(index))$/));
 loadTests(require.context("../../oui-skeleton/src/", true, /.*((\.spec)|(index))$/));
+<<<<<<< HEAD
 loadTests(require.context("../../oui-clipboard/src/", true, /.*((\.spec)|(index))$/));
+<<<<<<< HEAD
 loadTests(require.context("../../oui-slideshow/src/", true, /.*((\.spec)|(index))$/));
+=======
+=======
+loadTests(require.context("../../oui-tile/src/", true, /.*((\.spec)|(index))$/));
+>>>>>>> feat(oui-tile): create component
+>>>>>>> feat(oui-tile): create component
 
 function loadTests (context) {
     context.keys().forEach(context);
