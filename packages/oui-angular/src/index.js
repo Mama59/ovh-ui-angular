@@ -1,6 +1,7 @@
 import "@oui-angular/oui-button/src";
 import "@oui-angular/oui-calendar/src";
 import "@oui-angular/oui-checkbox/src";
+import "@oui-angular/oui-collapsible/src";
 import "@oui-angular/oui-radio/src";
 import "@oui-angular/oui-message/src";
 import "@oui-angular/oui-spinner/src";
@@ -27,11 +28,14 @@ import "@oui-angular/oui-chips/src";
 import "@oui-angular/oui-popover/src";
 import "@oui-angular/oui-stepper/src";
 import "@oui-angular/oui-progress/src";
+import "@oui-angular/oui-skeleton/src";
+import "@oui-angular/oui-clipboard/src";
 
 angular.module("oui", [
     "oui.button",
     "oui.calendar",
     "oui.checkbox",
+    "oui.collapsible",
     "oui.radio",
     "oui.message",
     "oui.spinner",
@@ -57,5 +61,7 @@ angular.module("oui", [
     "oui.chips",
     "oui.popover",
     "oui.stepper",
-    "oui.progress"
+    "oui.progress",
+    "oui.skeleton",
+    "oui.clipboard"
 ]);
