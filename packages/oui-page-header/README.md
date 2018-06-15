@@ -18,7 +18,9 @@
 ### With guide
 
 ```html:preview
-<oui-page-header heading="My title" description="My subtitle"></oui-page-header>
+<oui-page-header heading="My title" description="My subtitle">à
+    <oui-guide text="Guides"></oui-guide>
+</oui-page-header>
 ```
 
 
